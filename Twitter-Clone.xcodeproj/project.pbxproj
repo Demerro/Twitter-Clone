@@ -3,38 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 74;
+	objectVersion = 70;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		696320522C9835760021386A /* TwitterApplicationDelegate in Frameworks */ = {isa = PBXBuildFile; productRef = 696320512C9835760021386A /* TwitterApplicationDelegate */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6963200F2C98349C0021386A /* Twitter-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6963204D2C9835130021386A /* TwitterApplicationDelegate */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TwitterApplicationDelegate; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		696320212C98349E0021386A /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				/Localized/LaunchScreen.storyboard,
-				/Localized/Main.storyboard,
 				Info.plist,
 			);
 			target = 6963200E2C98349C0021386A /* Twitter-Clone */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		696320252C98349E0021386A /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 6963200D2C98349C0021386A /* Resources */;
-			membershipExceptions = (
-				Base.lproj/LaunchScreen.storyboard,
-				Base.lproj/Main.storyboard,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		696320112C98349C0021386A /* Twitter-Clone */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (696320212C98349E0021386A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 696320252C98349E0021386A /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Twitter-Clone"; sourceTree = "<group>"; };
+		696320112C98349C0021386A /* Twitter-Clone */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (696320212C98349E0021386A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Twitter-Clone"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696320522C9835760021386A /* TwitterApplicationDelegate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +44,7 @@
 		696320062C98349C0021386A = {
 			isa = PBXGroup;
 			children = (
+				6963204C2C9834FB0021386A /* Packages */,
 				696320112C98349C0021386A /* Twitter-Clone */,
 				696320102C98349C0021386A /* Products */,
 			);
@@ -62,6 +56,14 @@
 				6963200F2C98349C0021386A /* Twitter-Clone.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6963204C2C9834FB0021386A /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				6963204D2C9835130021386A /* TwitterApplicationDelegate */,
+			);
+			path = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +86,7 @@
 			);
 			name = "Twitter-Clone";
 			packageProductDependencies = (
+				696320512C9835760021386A /* TwitterApplicationDelegate */,
 			);
 			productName = "Twitter-Clone";
 			productReference = 6963200F2C98349C0021386A /* Twitter-Clone.app */;
@@ -101,10 +104,12 @@
 				TargetAttributes = {
 					6963200E2C98349C0021386A = {
 						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
 					};
 				};
 			};
 			buildConfigurationList = 6963200A2C98349C0021386A /* Build configuration list for PBXProject "Twitter-Clone" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -112,7 +117,9 @@
 				Base,
 			);
 			mainGroup = 696320062C98349C0021386A;
-			preferredProjectObjectVersion = 60;
+			packageReferences = (
+				696320502C9835760021386A /* XCLocalSwiftPackageReference "Packages/TwitterApplicationDelegate" */,
+			);
 			productRefGroup = 696320102C98349C0021386A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -148,17 +155,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KZY2C4A2P7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Twitter-Clone/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Twitter;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -166,9 +173,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demerro.Twitter-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -177,17 +189,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KZY2C4A2P7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Twitter-Clone/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Twitter;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -195,9 +207,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demerro.Twitter-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -342,6 +358,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		696320502C9835760021386A /* XCLocalSwiftPackageReference "Packages/TwitterApplicationDelegate" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/TwitterApplicationDelegate;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		696320512C9835760021386A /* TwitterApplicationDelegate */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TwitterApplicationDelegate;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 696320072C98349C0021386A /* Project object */;
 }
