@@ -28,17 +28,6 @@ fileprivate final class ApplicationFlowView: UIView {
     
     var mainFlowView: UIView { mainFlowProvider() }
     
-    func setupConstraints() {
-        mainFlowView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(mainFlowView)
-        NSLayoutConstraint.activate([
-            mainFlowView.topAnchor.constraint(equalTo: topAnchor),
-            mainFlowView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            trailingAnchor.constraint(equalTo: mainFlowView.trailingAnchor),
-            bottomAnchor.constraint(equalTo: mainFlowView.bottomAnchor),
-        ])
-    }
-    
     init(frame: CGRect, @_implicitSelfCapture mainFlow mainFlowProvider: @escaping () -> UIView) {
         self.mainFlowProvider = mainFlowProvider
         super.init(frame: frame)
@@ -48,5 +37,16 @@ fileprivate final class ApplicationFlowView: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    func setupConstraints() {
+        mainFlowView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(mainFlowView)
+        NSLayoutConstraint.activate([
+            mainFlowView.topAnchor.constraint(equalTo: topAnchor),
+            mainFlowView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            trailingAnchor.constraint(equalTo: mainFlowView.trailingAnchor),
+            bottomAnchor.constraint(equalTo: mainFlowView.bottomAnchor),
+        ])
     }
 }
