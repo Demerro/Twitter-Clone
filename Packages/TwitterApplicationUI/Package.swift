@@ -12,13 +12,18 @@ let package = Package(
             name: "TwitterApplicationUI",
             targets: ["TwitterApplicationUI"]),
     ],
-    dependencies: [.package(path: "TwitterMainUI")],
+    dependencies: [
+        .package(path: "TwitterMainUI"),
+        .package(path: "TwitterSideMenuUI"),
+        .package(path: "SwiftUtilities"),
+        .package(path: "UIKitUtilities"),
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "TwitterApplicationUI",
-            dependencies: ["TwitterMainUI"]
+            dependencies: ["TwitterMainUI", "TwitterSideMenuUI", "SwiftUtilities", "UIKitUtilities"]
         ),
     ]
 )

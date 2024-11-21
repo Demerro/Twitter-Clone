@@ -11,14 +11,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		694C8BD12C99C61E00EF90B6 /* TwitterTrendsUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TwitterTrendsUI; sourceTree = "<group>"; };
-		694C8BD22C99C6C300EF90B6 /* TwitterNotificationsUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TwitterNotificationsUI; sourceTree = "<group>"; };
-		694C8BD32C99C75D00EF90B6 /* TwitterMessagesUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TwitterMessagesUI; sourceTree = "<group>"; };
 		6963200F2C98349C0021386A /* Twitter-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6963204D2C9835130021386A /* TwitterApplicationDelegate */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TwitterApplicationDelegate; sourceTree = "<group>"; };
-		696320592C98368B0021386A /* TwitterApplicationUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TwitterApplicationUI; sourceTree = "<group>"; };
-		6963205A2C98378C0021386A /* TwitterMainUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TwitterMainUI; sourceTree = "<group>"; };
-		69D8A8552C99C3BF007DFDE4 /* TwitterHomeUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TwitterHomeUI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -33,6 +26,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		696320112C98349C0021386A /* Twitter-Clone */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (696320212C98349E0021386A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Twitter-Clone"; sourceTree = "<group>"; };
+		69D061672CDAAB66001ECE12 /* Packages */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Packages; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +44,7 @@
 		696320062C98349C0021386A = {
 			isa = PBXGroup;
 			children = (
-				6963204C2C9834FB0021386A /* Packages */,
+				69D061672CDAAB66001ECE12 /* Packages */,
 				696320112C98349C0021386A /* Twitter-Clone */,
 				696320102C98349C0021386A /* Products */,
 			);
@@ -62,20 +56,6 @@
 				6963200F2C98349C0021386A /* Twitter-Clone.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6963204C2C9834FB0021386A /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				694C8BD32C99C75D00EF90B6 /* TwitterMessagesUI */,
-				694C8BD22C99C6C300EF90B6 /* TwitterNotificationsUI */,
-				694C8BD12C99C61E00EF90B6 /* TwitterTrendsUI */,
-				69D8A8552C99C3BF007DFDE4 /* TwitterHomeUI */,
-				6963205A2C98378C0021386A /* TwitterMainUI */,
-				696320592C98368B0021386A /* TwitterApplicationUI */,
-				6963204D2C9835130021386A /* TwitterApplicationDelegate */,
-			);
-			path = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +171,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -224,7 +204,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

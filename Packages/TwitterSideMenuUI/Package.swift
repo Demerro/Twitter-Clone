@@ -4,21 +4,27 @@
 import PackageDescription
 
 let package = Package(
-    name: "TwitterApplicationDelegate",
+    name: "TwitterSideMenuUI",
     platforms: [.iOS(.v17)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "TwitterApplicationDelegate",
-            targets: ["TwitterApplicationDelegate"]),
+            name: "TwitterSideMenuUI",
+            targets: ["TwitterSideMenuUI"]),
     ],
-    dependencies: [.package(path: "TwitterApplicationUI"),],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-collections.git", from: "1.1.0"),
+        .package(path: "SwiftUtilities")
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "TwitterApplicationDelegate",
-            dependencies: ["TwitterApplicationUI"]
+            name: "TwitterSideMenuUI",
+            dependencies: [
+                .product(name: "Collections", package: "swift-collections"),
+                "SwiftUtilities"
+            ]
         ),
     ]
 )
