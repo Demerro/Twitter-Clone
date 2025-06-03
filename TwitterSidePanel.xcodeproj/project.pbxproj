@@ -143,7 +143,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KZY2C4A2P7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Twitter-Clone/Info.plist";
+				INFOPLIST_FILE = TwitterSidePanel/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Twitter;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -177,7 +177,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KZY2C4A2P7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Twitter-Clone/Info.plist";
+				INFOPLIST_FILE = TwitterSidePanel/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Twitter;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
