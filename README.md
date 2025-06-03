@@ -54,12 +54,6 @@ The side panel can be revealed with a pan gesture that:
 
 The side menu can be accessed by swiping from the left edge of the screen. The animation will complete based on the velocity and distance of the gesture.
 
-## Requirements
-
-- iOS 15.0+
-- Xcode 14.0+
-- Swift 5.7+
-
 ## License
 
 This project is available under the MIT license.
