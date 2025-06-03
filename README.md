@@ -10,6 +10,9 @@ A Swift implementation of Twitter's interactive side menu panel with realistic p
 - Interactive transitions with velocity-sensitive animations
 - Twitter-style UI elements and layout
 
+## Demo
+https://github.com/user-attachments/assets/4c202dd8-fa6b-4499-ac33-80aaed42fd70
+
 ## Implementation Details
 
 ### Architecture
