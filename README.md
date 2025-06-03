@@ -1,4 +1,4 @@
-# Twitter Clone - Side Panel Implementation
+# Twitter Side Panel Implementation
 
 A Swift implementation of Twitter's interactive side menu panel with realistic physics-based animations.
 
