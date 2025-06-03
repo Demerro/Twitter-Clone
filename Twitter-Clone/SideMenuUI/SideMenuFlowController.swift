@@ -1,17 +1,17 @@
 import UIKit
 
-public final class SideMenuFlowController: UINavigationController {
+final class SideMenuFlowController: UINavigationController {
     
     private let sideMenuViewController = SideMenuViewController()
     
-    public init() {
+    init() {
         super.init(rootViewController: sideMenuViewController)
         navigationBar.isHidden = true
         isToolbarHidden = false
     }
     
     @available(*, unavailable)
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
 }

@@ -1,6 +1,5 @@
 import UIKit
 import OrderedCollections
-import SwiftUtilities
 
 final class SideMenuViewController: UIViewController {
     
@@ -153,8 +152,4 @@ extension SideMenuViewController {
         case settingsAndPrivacy
         case helpCenter
     }
-}
-
-#Preview {
-    SideMenuViewController()
 }

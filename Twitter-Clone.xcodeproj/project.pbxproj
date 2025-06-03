@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		696320522C9835760021386A /* TwitterApplicationDelegate in Frameworks */ = {isa = PBXBuildFile; productRef = 696320512C9835760021386A /* TwitterApplicationDelegate */; };
+		69A2511B2DEF5EA800F1CE21 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 69A2511A2DEF5EA800F1CE21 /* Collections */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,6 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		696320112C98349C0021386A /* Twitter-Clone */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (696320212C98349E0021386A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Twitter-Clone"; sourceTree = "<group>"; };
-		69D061672CDAAB66001ECE12 /* Packages */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Packages; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				696320522C9835760021386A /* TwitterApplicationDelegate in Frameworks */,
+				69A2511B2DEF5EA800F1CE21 /* Collections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,7 +43,6 @@
 		696320062C98349C0021386A = {
 			isa = PBXGroup;
 			children = (
-				69D061672CDAAB66001ECE12 /* Packages */,
 				696320112C98349C0021386A /* Twitter-Clone */,
 				696320102C98349C0021386A /* Products */,
 			);
@@ -78,7 +76,7 @@
 			);
 			name = "Twitter-Clone";
 			packageProductDependencies = (
-				696320512C9835760021386A /* TwitterApplicationDelegate */,
+				69A2511A2DEF5EA800F1CE21 /* Collections */,
 			);
 			productName = "Twitter-Clone";
 			productReference = 6963200F2C98349C0021386A /* Twitter-Clone.app */;
@@ -110,7 +108,7 @@
 			);
 			mainGroup = 696320062C98349C0021386A;
 			packageReferences = (
-				696320502C9835760021386A /* XCLocalSwiftPackageReference "Packages/TwitterApplicationDelegate" */,
+				69A251192DEF5EA800F1CE21 /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = 696320102C98349C0021386A /* Products */;
 			projectDirPath = "";
@@ -351,17 +349,22 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		696320502C9835760021386A /* XCLocalSwiftPackageReference "Packages/TwitterApplicationDelegate" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Packages/TwitterApplicationDelegate;
+/* Begin XCRemoteSwiftPackageReference section */
+		69A251192DEF5EA800F1CE21 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		696320512C9835760021386A /* TwitterApplicationDelegate */ = {
+		69A2511A2DEF5EA800F1CE21 /* Collections */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = TwitterApplicationDelegate;
+			package = 69A251192DEF5EA800F1CE21 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

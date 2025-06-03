@@ -1,5 +1,4 @@
 import Foundation
-import SwiftUtilities
 
 @inlinable
 public func rubberBandClamp(_ x: CGFloat, coeff: CGFloat, dim: CGFloat) -> CGFloat {

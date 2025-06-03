@@ -4,7 +4,7 @@ final class SideMenuHeaderView: UICollectionReusableView {
     
     let imageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.image = UIImage(named: "ProfileImageTemplate", in: .module, with: nil)
+        $0.image = .profileImageTemplate
         $0.clipsToBounds = true
         $0.layer.cornerCurve = .continuous
         return $0
