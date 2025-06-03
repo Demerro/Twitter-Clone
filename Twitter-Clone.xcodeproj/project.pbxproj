@@ -6,10 +6,6 @@
 	objectVersion = 70;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		69A2511B2DEF5EA800F1CE21 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 69A2511A2DEF5EA800F1CE21 /* Collections */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		6963200F2C98349C0021386A /* Twitter-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -33,7 +29,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69A2511B2DEF5EA800F1CE21 /* Collections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +71,6 @@
 			);
 			name = "Twitter-Clone";
 			packageProductDependencies = (
-				69A2511A2DEF5EA800F1CE21 /* Collections */,
 			);
 			productName = "Twitter-Clone";
 			productReference = 6963200F2C98349C0021386A /* Twitter-Clone.app */;
@@ -108,7 +102,6 @@
 			);
 			mainGroup = 696320062C98349C0021386A;
 			packageReferences = (
-				69A251192DEF5EA800F1CE21 /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = 696320102C98349C0021386A /* Products */;
 			projectDirPath = "";
@@ -348,25 +341,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		69A251192DEF5EA800F1CE21 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-collections.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		69A2511A2DEF5EA800F1CE21 /* Collections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 69A251192DEF5EA800F1CE21 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = Collections;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 696320072C98349C0021386A /* Project object */;
 }

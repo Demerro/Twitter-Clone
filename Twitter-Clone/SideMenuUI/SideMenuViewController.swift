@@ -1,5 +1,4 @@
 import UIKit
-import OrderedCollections
 
 final class SideMenuViewController: UIViewController {
     
@@ -23,16 +22,14 @@ final class SideMenuViewController: UIViewController {
         return collectionView
     }()
     
-    private(set) var sections: OrderedDictionary<Section.ID, Section> = [
-        Section(type: .main, title: "", items: [
-            Item(type: .profile, title: "Profile", image: UIImage(systemName: "person")!) {},
-            Item(type: .lists, title: "Lists", image: UIImage(systemName: "list.bullet.rectangle")!) {},
-            Item(type: .topics, title: "Topics", image: UIImage(systemName: "ellipsis.message")!) {},
-            Item(type: .bookmarks, title: "Bookmarks", image: UIImage(systemName: "bookmark")!) {},
-            Item(type: .moments, title: "Moments", image: UIImage(systemName: "bolt")!) {},
-            Item(type: .settingsAndPrivacy, title: "Settings and privacy", image: nil) {},
-            Item(type: .helpCenter, title: "Help Center", image: nil) {},
-        ])
+    private(set) var items: [Item] = [
+        Item(title: "Profile", image: UIImage(systemName: "person")!) {},
+        Item(title: "Lists", image: UIImage(systemName: "list.bullet.rectangle")!) {},
+        Item(title: "Topics", image: UIImage(systemName: "ellipsis.message")!) {},
+        Item(title: "Bookmarks", image: UIImage(systemName: "bookmark")!) {},
+        Item(title: "Moments", image: UIImage(systemName: "bolt")!) {},
+        Item(title: "Settings and privacy", image: nil) {},
+        Item(title: "Help Center", image: nil) {},
     ]
     
     override func loadView() {
@@ -58,12 +55,9 @@ extension SideMenuViewController {
     }
     
     private func setupSnapshot() {
-        var snapshot = NSDiffableDataSourceSnapshot<Section.ID, Item.ID>()
-        snapshot.appendSections(Array(sections.keys))
-        for sectionIdentifier in snapshot.sectionIdentifiers {
-            guard let section = sections[sectionIdentifier] else { return }
-            snapshot.appendItems(Array(section.items.keys), toSection: sectionIdentifier)
-        }
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item.ID>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(items.map(\.id))
         collectionViewDataSource.apply(snapshot, animatingDifferences: false)
     }
 }
@@ -92,16 +86,11 @@ extension SideMenuViewController {
         }
     }
     
-    private func makeCollectionViewDiffableDataSource() -> UICollectionViewDiffableDataSource<Section.ID, Item.ID> {
+    private func makeCollectionViewDiffableDataSource() -> UICollectionViewDiffableDataSource<Section, Item.ID> {
         let cellRegistration = makeCollectionViewCellRegistration()
         let headerRegistration = makeCollectionViewSectionHeaderRegistration()
-        let dataSource = UICollectionViewDiffableDataSource<Section.ID, Item.ID>(collectionView: collectionView) { [unowned self] collectionView, indexPath, itemIdentifier in
-            guard let sectionIdentifier = collectionViewDataSource.sectionIdentifier(for: indexPath.section),
-                  let itemIdentifier = collectionViewDataSource.itemIdentifier(for: indexPath),
-                  let section = sections[sectionIdentifier],
-                  let item = section.items[itemIdentifier]
-            else { preconditionFailure() }
-            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
+        let dataSource = UICollectionViewDiffableDataSource<Section, Item.ID>(collectionView: collectionView) { [unowned self] collectionView, indexPath, itemIdentifier in
+            collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: items[indexPath.item])
         }
         dataSource.supplementaryViewProvider = { collectionView, elementKind, indexPath in
             collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
@@ -112,44 +101,18 @@ extension SideMenuViewController {
 
 extension SideMenuViewController {
     
-    struct Section: Identifiable {
-        
-        let id = UUID()
-        
-        let type: SectionType
-        
-        let title: String
-        
-        let items: OrderedDictionary<ID, Item>
-    }
-    
-    enum SectionType {
+    enum Section {
         case main
     }
-}
-
-extension SideMenuViewController {
     
     struct Item: Identifiable {
         
         let id = UUID()
-        
-        let type: ItemType
         
         let title: String
         
         let image: UIImage?
         
         let actionHandler: () -> Void
-    }
-    
-    enum ItemType {
-        case profile
-        case lists
-        case topics
-        case bookmarks
-        case moments
-        case settingsAndPrivacy
-        case helpCenter
     }
 }
